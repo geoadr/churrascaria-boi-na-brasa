@@ -69,85 +69,91 @@
     .main-content {
       padding: 30px 20px;
       max-width: 1000px;
-      margin: auto;
+      margin: 20px auto 40px auto;
       background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 10px;
-      margin-top: 20px;
-      margin-bottom: 80px;
     }
 
-    .main-content h2,
-    .main-content h3 {
+    .main-content h2 {
       color: #8B0000;
     }
 
-    .main-content ul {
-      list-style: disc;
-      padding-left: 20px;
+    .dish {
+      margin-bottom: 40px;
+      text-align: center;
     }
 
-    .main-content blockquote {
-      font-style: italic;
-      margin: 10px 0;
-      padding-left: 15px;
-      border-left: 4px solid #8B0000;
-      color: #555;
-    }
-
-    .main-content img {
+    .dish img {
       width: 100%;
-      max-width: 800px;
-      display: block;
-      margin: 20px auto;
+      max-width: 400px;
       border-radius: 10px;
+      margin: 10px auto;
+    }
+
+    .dish p {
+      color: #444;
+      font-size: 15px;
+      margin-top: 5px;
     }
 
     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 10px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      padding: 15px;
     }
   </style>
 </head>
 <body>
-    <header>
-        <img src="logo.png" alt="Logo" />
-        <div class="header-text">
-            <h1>Menu-Boi na brasa</h1>
-            <p>Veja nossas opções deliciosas</p>
-        </div>
-      </header>
+  <header>
+    <img src="logo.png" alt="Logo" />
+    <div class="header-text">
+      <h1>Menu - Boi na Brasa</h1>
+      <p>Veja nossas opções deliciosas</p>
+    </div>
+  </header>
+
   <nav>
     <a href="index.html">Início</a>
     <a href="menu.html">Menu</a>
     <a href="bebidas.html">Carta de Bebidas</a>
     <a href="contato.html">Contato</a>
   </nav>
+
   <section class="main-content">
-  <div class="content">
     <h2>Pratos à la carte</h2>
-    <ul>
-      <li>Picanha na chapa</li>
-      <img src="picanha.jpeg" alt="picanha">
-      <li>Costela assada</li>
-      <img src="costela.jpeg" alt="costela">
-      <li>Frango grelhado com ervas</li>
-      <img src="frango.jpeg" alt="frango">
-      <li>Linguicinha artesanal</li>
-      <img src="linguiça.jpeg" alt="linguiça">
-    </ul>
-    
+
+    <div class="dish">
+      <h3>Picanha na Chapa</h3>
+      <img src="picanha.jpeg" alt="Picanha na chapa">
+      <p>Corte nobre grelhado na chapa com alho, acompanhado de arroz, farofa e vinagrete.</p>
+    </div>
+
+    <div class="dish">
+      <h3>Costela Assada</h3>
+      <img src="costela.jpeg" alt="Costela assada">
+      <p>Costela bovina assada lentamente no bafo, servida com mandioca cozida e molho chimichurri.</p>
+    </div>
+
+    <div class="dish">
+      <h3>Frango Grelhado com Ervas</h3>
+      <img src="frango.jpeg" alt="Frango grelhado">
+      <p>Peito de frango marinado com alecrim, tomilho e limão, grelhado na brasa e servido com legumes salteados.</p>
+    </div>
+
+    <div class="dish">
+      <h3>Linguicinha Artesanal</h3>
+      <img src="linguiça.jpeg" alt="Linguiça artesanal">
+      <p>Linguicinha artesanal de pernil suíno, servida com farofa crocante e molho barbecue.</p>
+    </div>
 
     <h2>Rodízio</h2>
-    <p>Rodízio completo com mais de 20 cortes nobres, buffet de saladas e acompanhamentos inclusos.</p>
-  </div>
+    <p style="text-align: center;">Rodízio completo com mais de 20 cortes nobres, buffet de saladas e acompanhamentos inclusos.</p>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Churrascaria Boi na Brasa.</p>
+    <p>&copy; 2025 Churrascaria Boi na Brasa. Todos os direitos reservados.</p>
     <p>Contato: atendimento@boinabrasa.com</p>
   </footer>
 </body>
