@@ -10,7 +10,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #834c4c;
+      background-color: #000000;
     }
 
     header {
@@ -48,7 +48,7 @@
     }
 
     nav {
-      background-color: #333;
+      background-color: #2c0a0a;
       display: flex;
     }
 
@@ -75,6 +75,7 @@
       border-radius: 10px;
       margin-top: 20px;
       margin-bottom: 80px;
+      border: 4px solid #804a0d; 
     }
 
     .main-content h2,
@@ -104,13 +105,59 @@
     }
 
     footer {
-      background-color: #333;
+      background-color: #2c0a0a;
       color: white;
       text-align: center;
       padding: 10px;
       position: fixed;
       bottom: 0;
       width: 100%;
+    }
+
+    /* Accordion styles */
+    .accordion {
+      cursor: pointer;
+      padding: 10px;
+      background-color: #ffffff;
+      color: white;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 18px;
+    }
+
+    .accordion:hover {
+      background-color: #68491b;
+    }
+
+    .panel {
+      padding: 10px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+
+    /* Estilo especial para listas decorativas */
+    .decorated-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .decorated-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .decorated-list li span {
+      font-size: 20px;
+      margin-right: 10px;
     }
   </style>
 </head>
@@ -132,33 +179,63 @@
 
   <section class="main-content">
     <h2>Bem-vindo!</h2>
-    <p>Conheça a melhor churrascaria da cidade. Rodízio completo, pratos variados e uma seleção especial de bebidas.</p>
+    <p>Conheça a melhor churrascaria da cidade, onde a tradição do autêntico churrasco gaúcho se encontra com um ambiente acolhedor e sofisticado. Oferecemos um rodízio completo com cortes nobres preparados no ponto ideal, pratos variados que agradam a todos os paladares e uma seleção especial de bebidas, incluindo vinhos finos, cervejas artesanais e coquetéis exclusivos. Venha viver uma experiência gastronômica inesquecível conosco!</p>
 
-    <h2>Nosso Rodízio</h2>
-    <ul>
-      <li>Picanha, Alcatra, Fraldinha e muito mais</li>
-      <li>Buffet com saladas, pratos quentes e sobremesas</li>
-      <li>Atendimento à la carte e rodízio todos os dias</li>
-    </ul>
+    <h2 class="accordion">Nosso Rodízio</h2>
+    <div class="panel">
+      <ul>
+        <li>Picanha, Alcatra, Fraldinha e muito mais</li>
+        <li>Buffet com saladas, pratos quentes e sobremesas</li>
+        <li>Atendimento à la carte e rodízio todos os dias</li>
+      </ul>
+    </div>
 
     <img src="churrasco.jpg" alt="Churrasco delicioso" />
 
-    <h3>O que dizem nossos clientes</h3>
-    <blockquote>
-      "A melhor carne que já comi! Atendimento impecável." – João Silva
-    </blockquote>
-    <blockquote>
-      "Ambiente familiar e comida maravilhosa. Voltarei com certeza!" – Maria Fernanda
-    </blockquote>
+    <h3 class="accordion">O que dizem nossos clientes</h3>
+    <div class="panel">
+      <blockquote>
+        "A melhor carne que já comi! Atendimento impecável." – Jesmmer
+      </blockquote>
+      <blockquote>
+        "Ambiente familiar e comida maravilhosa. Voltarei com certeza!" – Fernando
+      </blockquote>
+    </div>
 
-    <h3>Horário de Funcionamento</h3>
-    <p>Segunda a Sábado: 11h – 23h</p>
-    <p>Domingos e Feriados: 11h – 17h</p>
+    <h3 class="accordion">Horário de Funcionamento</h3>
+    <div class="panel">
+      <ul class="decorated-list">
+        <li>
+          <span>🕒</span>
+          <strong>Segunda a Sábado:</strong> 11h – 23h
+        </li>
+        <li>
+          <span>📅</span>
+          <strong>Domingos e Feriados:</strong> 11h – 17h
+        </li>
+      </ul>
+    </div>
   </section>
 
   <footer>
     <p>&copy; 2025 Churrascaria Boi na Brasa. Todos os direitos reservados.</p>
     <p>Contato: atendimento@boinabrasa.com</p>
   </footer>
+
+  <script>
+    const acc = document.querySelectorAll('.accordion');
+
+    acc.forEach(function(el) {
+      el.addEventListener('click', function() {
+        this.classList.toggle('active');
+        const panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
